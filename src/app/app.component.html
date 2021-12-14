@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand white-text" routerLink="/home">{{titre}}</a>
+
+        <form class="d-flex">
+            <div class="demo-button-container">
+                <a routerLink="/add">
+                </a>
+            </div>
+            <button mat-raised-button class="demo-button right-margin">Add Item</button>
+            <mat-slide-toggle class="white-text top-margin" (click)="loginLogout()">Login</mat-slide-toggle>
+        </form>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!--
+<app-assignments></app-assignments>
+ -->

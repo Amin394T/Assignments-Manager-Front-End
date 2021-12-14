@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ajouterBtn {
+    align-self: flex;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-row:hover {
+    background-color: #e7e9eb;
+}
+
+.noColor {
+    text-decoration: none;
+    color: black;
+}
+
+.demo-table {
+    width: 100%;
+}
+
+.demo-button-container {
+    padding-bottom: 16px;
+}
+
+.demo-button+.demo-button {
+    margin-left: 8px;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+.example-container {
+    height: 550px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#details-button {
+    background-color: rgb(56, 170, 94);
+    border-radius: 6px;
+}
+
+#delete-button {
+    border-radius: 6px;
+}
+
+#paginator {
+    bottom: 0;
+}
+
+.center-content {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+input {
+    width: 300px;
+}

@@ -1,0 +1,58 @@
+<div class="center-content"><input class="form-control me-2" type="text" placeholder="Assignment name ..." aria-label="Search" [(ngModel)]="value" name="search">
+    <button class="btn btn-primary my-2 my-sm-0" type="submit" (click)="onSearch()">Search</button>
+</div><br> <br>
+
+<div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="assignments">
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element">{{element.id}}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="nom">
+            <th mat-header-cell *matHeaderCellDef> Nom </th>
+            <td mat-cell *matCellDef="let element">{{element.nom}}</td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="dateRendu">
+            <th mat-header-cell *matHeaderCellDef> Date de Rendu </th>
+            <td mat-cell *matCellDef="let element"> {{element.dateRendu | date}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="rendu">
+            <th mat-header-cell *matHeaderCellDef> Rendu </th>
+            <td mat-cell *matCellDef="let element"> {{element.rendu}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Details </th>
+            <td mat-cell *matCellDef="let element">
+                <a class="noColor" routerLink="/assignment/{{element.id}}">
+                    <button mat-mini-fab id="details-button">
+                <mat-icon>remove_red_eye</mat-icon>
+            </button>
+                </a>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-mini-fab color="warn" id="delete-button" (click)="onDelete(element)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div id="paginator">
+        <mat-paginator showFirstLastButtons aria-label="">
+        </mat-paginator>
+    </div>
+</div>
