@@ -1,7 +1,7 @@
 ## AssignmentApp Heroku links :
 
-client: https://assignment-manager-client.herokuapp.com/
-server: https://assignments-manager01.herokuapp.com/api/assignments
+- client: https://assignment-manager-client.herokuapp.com/
+- server: https://assignments-manager01.herokuapp.com/api/assignments
 
 ## Additions :
 - tableau Angular Materials et pagination.
